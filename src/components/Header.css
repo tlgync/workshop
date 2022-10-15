@@ -1,0 +1,53 @@
+.Header{
+    background-color: rgb(211, 211, 211);
+    height: 75px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+
+}
+
+.Header a{
+    text-decoration: none;
+    color: coral;
+    font-size: 21px;
+    font-weight:600;
+    margin: 0 15px;
+}
+
+.Header a:hover{
+    color: white;
+    transition: all 0.25s ease-in;
+}
+.Link-true{
+    color: white !important;
+}
+.Header svg path{
+    fill: coral !important;
+}
+.Header svg circle{
+    fill: coral !important;
+}
+
+.badge{
+    position: relative;
+}
+
+.badgeItem{
+    position: absolute;
+    top:-13px;
+    right: -18px;
+    width: 10px;
+    height: 10px;
+    background-color: coral;
+    padding: 5px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+}

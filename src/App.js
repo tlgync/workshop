@@ -1,13 +1,13 @@
 import "./App.css";
-import { Countries } from "./Countries";
-import { Counter } from "./Counter";
+
+import { BrowserRouter } from "react-router-dom";
+import { Layout } from "./components/Layout";
 
 function App() {
   return (
-    <div>
-      <Counter />
-      <Countries />
-    </div>
+    <BrowserRouter>
+      <Layout />
+    </BrowserRouter>
   );
 }
 
