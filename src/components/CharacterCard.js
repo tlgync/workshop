@@ -6,12 +6,10 @@ export const CharacterCard = ({ src, name, status, gender }) => {
     <div className="CharacterCard">
       <LazyLoadImage
         effect="blur"
-        delayMethod="debounce"
         alt={name}
         height={300}
         src={src}
         width={300}
-        delayTime={20000}
       />
       <div className="CharacterCard-detail">
         <div className="CharacterCard-name">{name}</div>
