@@ -1,0 +1,35 @@
+.CharacterDetail {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.CharacterDetail-card {
+  border: 1px solid #ddd;
+  padding: 10px 10px;
+  border-radius: 7px;
+  position: relative;
+}
+.CharacterDetail-card img {
+  border-radius: 7px;
+}
+
+.CharacterDetail-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 7px;
+  font-size: 18px;
+}
+
+.svgArrow{
+    cursor: pointer;
+    position: absolute;
+    top: -40px;
+    z-index: 999;
+}
