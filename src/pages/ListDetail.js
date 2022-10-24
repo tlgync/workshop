@@ -7,11 +7,12 @@ import { ReactComponent as LeftArrow } from "../assets/left-arrow.svg";
 import Loader from "../components/Loader";
 
 export default function ListDetail() {
+  const history = useHistory();
+  const pathId = history.location.pathname.split("/")[2];
+
   const [item, setItem] = useState({});
   const [id, setId] = useState();
   const [loader, setLoader] = useState(true);
-  const history = useHistory();
-  const pathId = history.location.pathname.split("/")[2];
 
   useEffect(() => {
     if (pathId) {

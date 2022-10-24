@@ -9,17 +9,19 @@ import Loader from "../components/Loader";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export const List = () => {
+  const page = localStorage.getItem("page");
+
   const [list, setList] = useState([]);
   const [info, setInfo] = useState({});
-  const [initialPage, setInitialPage] = useState(1);
+  const [initialPage, setInitialPage] = useState(page ? parseInt(page) : 1);
   const [isLoader, setIsLoader] = useState(true);
-
-  //"https://rickandmortyapi.com/api/character/?page=2",
 
   const handleClick = (type) => {
     if (type) {
+      localStorage.setItem("page", initialPage + 1);
       setInitialPage(initialPage + 1);
     } else {
+      localStorage.setItem("page", initialPage - 1);
       setInitialPage(initialPage - 1);
     }
   };
