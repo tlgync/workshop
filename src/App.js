@@ -1,41 +1,16 @@
 import "./App.css";
 
-import { BrowserRouter, Route, Switch, useHistory } from "react-router-dom";
-import { CharacterList } from "./pages/CharacterList";
-import { CharacterDetail } from "./pages/CharacterDetail";
-import { useEffect, useState } from "react";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { List } from "./pages/List";
+import ListDetail from "./pages/ListDetail";
 
 function App() {
-  const [list, setList] = useState([]);
-
-  const getCharacterList = async () => {
-    const res = await fetch("https://rickandmortyapi.com/api/character/");
-    const result = await res.json();
-    setList(result.results);
-  };
-
-  useEffect(() => {
-    getCharacterList();
-  }, []);
   return (
     <BrowserRouter>
       <Switch>
-        <Route
-          exact={true}
-          path="/"
-          render={() => (
-            <CharacterList
-              list={list}
-              setList={setList}
-            />
-          )}
-        />
-        <Route
-          path="/detail/:id"
-          render={() => <CharacterDetail list={list} />}
-        />
+        <Route exact={true} path="/" render={() => <List />} />
+        <Route path="/detail/:id" render={() => <ListDetail />} />
       </Switch>
-      {/* <Layout /> */}
     </BrowserRouter>
   );
 }
